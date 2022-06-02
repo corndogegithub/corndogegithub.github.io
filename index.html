@@ -27,6 +27,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script>
 		 $(document).ready(function(){
@@ -43,9 +47,9 @@
 body{
 background:#7F5300;
 color:#FFFFFF;
-font-family: 'Open Sans', sans-serif;
-font-size:16px;
-font-weight: normal;
+font-family: 'Londrina Solid', sans-serif;
+font-size:20px;
+font-weight: 300;
 font-style: normal;
 text-rendering: optimizeLegibility !important;
 -webkit-font-smoothing: antialiased !important;
@@ -100,7 +104,7 @@ letter-spacing:0em;
 	
 .hero-container .hero-title{
 font-weight:700;
-font-size:3.5em;;
+font-size:3em;;
 letter-spacing:0px;
     position:relative;
 color:#FFFFFF;
@@ -124,13 +128,41 @@ position:relative;
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-name: bounce-2;
-        animation-timing-function: ease;
+        animation-timing-function: ease-in-out;
+       /*animation-direction: alternate;*/
     }
+    
+    .hero-image-run {
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-name: bounce-3;
+        animation-timing-function: linear;
+    }
+    
+    
     @keyframes bounce-2 {
-        0%   { transform: translateY(0); }
-        50%  { transform: translateY(-25px); }
-        100% { transform: translateY(0); }
+        0%   { transform: translateX(50px) scaleX(1) ;}
+        
+        45%   { transform: scaleX(1);}
+        50%  { transform: translateX(-50px) scaleX(-1); }
+        
+        95%  { transform: scaleX(-1); }
+        100% { transform: translateX(50px) scaleX(1);}
     }   
+    
+     @keyframes bounce-3 {
+        0%   { transform: translateY(0px);}
+        10%   { transform: translateY(-10px);}
+        20%   { transform: translateY(0px);}
+        30%   { transform: translateY(-10px);}
+        40%   { transform: translateY(0px);}
+        50%  { transform:  translateY(-10px); }
+        60%   { transform: translateY(0px);}
+       70%   { transform: translateY(-10px);}
+        80%   { transform: translateY(0px);}
+        90%   { transform: translateY(-10px);}
+        100% { transform: translateY(0px);}
+    } 
 
 
 .hero-container .buy-button{
@@ -176,6 +208,7 @@ font-size:1em;
 /* SECTION CLASS */
 
 .section{
+    background:transparent !important;
 }
 
 .section-container{
@@ -184,7 +217,6 @@ font-size:1em;
 .section-title{
 font-size:3em;
 font-weight:700;
-font-family: 'Open Sans', sans-serif;
 /*text-shadow: 10px #2C174F;*/
     /*letter-spacing:0.025em;*/
 }
@@ -459,6 +491,10 @@ font-weight:500;
 }
 
 @media (min-width: 992px){
+
+.col-hero-image{
+overflow:visible !important;
+}
 	/*
 	.hero-container{
     height: calc(100vh - 76px);
@@ -511,7 +547,7 @@ border:0;
 z-index:3;
 padding:0;
 position:fixed !important;
-top:16px;
+top:19px;
 right:16px;
 }
 
@@ -524,7 +560,7 @@ padding:12px;
 color:#FFFFFF !important;
     text-transform:capitalize;
     font-size:1.125em;
-    font-weight:500;
+    font-weight:400;
 }
 
 
@@ -615,20 +651,20 @@ background: #FF650D;
      /* LIVE BACKGROUND */
     
     .background-video-container {
-        margin-top:-75px;
-    position: absolute;
+        /*margin-top:-75px;*/
+    position: fixed;
     z-index: -2;
-    height: calc(100% + 75px);
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
 }
     
     .dark-background-overlay {
-        margin-top:-75px;
-    position: absolute;
+       /* margin-top:-75px;*/
+    position: fixed;
     z-index: -1;
-    height: calc(100% + 75px);
+    height: 100%;
     width: 100%;
     background: rgba(0,0,0,0.25);
     top: 0;
@@ -651,7 +687,7 @@ background: #FF650D;
 <div class="container" data-aos="fade">
 <a class="navbar-brand d-flex flex-row justify-content-center align-items-center" href="/">
     <img class="d-none img-fluid me-2" src="images/logo-text-only.png" style="max-height:34px;">
-<h1 class="mb-0" style="font-size:1em;font-weight:300;color:#C012D1">Cheetoge Inu</h1></a>
+<h1 class="mb-0" style="font-size:1em;font-weight:300;color:#FFFFFF">Cheetoge Inu</h1></a>
 <button id="navToggler" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 <div class="navbar-collapse collapse" id="navbarTogglerDemo02" style="">
 <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
@@ -702,7 +738,7 @@ background: #FF650D;
   <span class="front">Join Our Telegram</span>
 </button></a>
 </div>
-</div><div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" style="position:relative;">
+</div><div class="overflow-hidden col-hero-image  col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" style="position:relative;">
 
 <div class="hero-img-wrapper w-100" data-aos="fade-left"><img class="hero-img hero-image img-fluid w-100" src="images/logo-only.png" style="background:transparent !important;"></div>
 
@@ -716,7 +752,7 @@ background: #FF650D;
 
 <section id="about" class="section about-section">
 <div class="section-container about-container container py-5">
-<h2 class="section-title about-title mt-4 text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">ABOUT</h2>
+<h2 class="section-title about-title mt-4 text-center" data-aos="fade" style="">ABOUT</h2>
 
 <div class="row mt-5">
 <div class="col-12 text-center">
@@ -728,7 +764,7 @@ background: #FF650D;
 </section>
 <section id="features" class="section features-section pt-5">
 <div class="section-container features-container container py-5">
-<h2 class="section-title tokenomics-title text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">FEATURES</h2><div class="row mt-5 mb-4">
+<h2 class="section-title tokenomics-title text-center" data-aos="fade" style="">FEATURES</h2><div class="row mt-5 mb-4">
 
 <div class="col-12 col-lg-4 mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="border:0; background-color: rgb(255, 215, 13);
@@ -774,7 +810,7 @@ background: #FF650D;
 
 <section id="tokenomics" class="section tokenomics-section">
 <div class="section-container tokenomics-container container py-5">
-<h2 class="mt-4 section-title tokenomics-title text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">TOKENOMICS</h2>
+<h2 class="mt-4 section-title tokenomics-title text-center" data-aos="fade" style="">TOKENOMICS</h2>
 <div class="row">
 <div class="col-12">
                        <table class="table table-striped tokenomics-info-table mt-5 mb-4 mx-auto" data-aos="fade">
@@ -809,8 +845,8 @@ background: #FF650D;
 -234deg
 , rgba(255, 215, 13, 0.855) 0%, rgba(255, 215, 13, 0.796) 100%);
     /*box-shadow: 0 0 12px rgb(255 215 13 / 64%);*/">
-<span class="tax-title text-center mb-3">1%</span>
-<span class="tax-title-2 text-center mb-3">Liquidity Pool</span><span class="tax-description text-center">1% of every transaction is transformed into liquidity. It's automatic and helps create a price floor.</span>
+<span class="tax-title text-center mb-3">4%</span>
+<span class="tax-title-2 text-center mb-3">Liquidity Pool</span><span class="tax-description text-center">4% of every transaction is transformed into liquidity. It's automatic and helps create a price floor.</span>
 </div>
 </div><div class="col-12 col-lg-4 me-auto mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="border:0; background-color: rgb(255, 101, 13);
@@ -818,8 +854,8 @@ background: #FF650D;
 -234deg
 , rgba(255, 101, 13, 0.855) 0%, rgba(255, 101, 13, 0.796) 100%);
     /*box-shadow: 0 0 12px rgb(255 215 13 / 64%);*/">
-<span class="tax-title text-center mb-3">6%</span>
-<span class="tax-title-2 text-center mb-3">Marketing</span><span class="tax-description text-center">6% of every transaction is taken and will be used for enhancements, operations, and marketing of the project.</span>
+<span class="tax-title text-center mb-3">4%</span>
+<span class="tax-title-2 text-center mb-3">Marketing</span><span class="tax-description text-center">4% of every transaction is taken and will be used for enhancements, operations, and marketing of the project.</span>
 </div>
 </div>
 
@@ -833,7 +869,7 @@ background: #FF650D;
 <section id="roadmap" class="section roadmap-section">
 <div class="section-container roadmap-container container py-5">
 <div class="text-center">
-<h2 class="section-title roadmap-title mt-4" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">ROADMAP</h2>
+<h2 class="section-title roadmap-title mt-4" data-aos="fade" style="">ROADMAP</h2>
 <div class="row mt-5 mb-4">
 <div class="col-12 col-lg-4 text-center py-3">
 <h4 data-aos="fade" class="aos-init">PHASE 1</h4>
@@ -882,7 +918,7 @@ background: #FF650D;
 </div>
 </section><section id="swap" class="section swap-section">
 <div class="section-container swap-container container py-5">
-<h2 class="mt-4 section-title swap-title text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">BUY $CHEETOGE</h2>
+<h2 class="mt-4 section-title swap-title text-center" data-aos="fade" style="">BUY $CHEETOGE</h2>
 
 <div class="row mt-5 mb-4">
 
@@ -899,7 +935,7 @@ background: #FF650D;
 
 <section id="faq" class="section faq-section">
 <div class="section-container faq-container container py-5">
-<h2 class="mt-4 section-title faq-title text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">FAQ</h2>
+<h2 class="mt-4 section-title faq-title text-center" data-aos="fade" style="">FAQ</h2>
 
 <div class="row mb-4 mt-5">
 
