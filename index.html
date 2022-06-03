@@ -661,20 +661,20 @@ background: #FF650D;
      /* LIVE BACKGROUND */
     
     .background-video-container {
-        /*margin-top:-75px;*/
-    position: fixed;
+        margin-top:-81px;
+    position: absolute;
     z-index: -2;
-    height: 100%;
+    height: calc(100% + 81px);
     width: 100%;
     top: 0;
     left: 0;
 }
     
     .dark-background-overlay {
-       /* margin-top:-75px;*/
-    position: fixed;
+        margin-top:-81px;
+    position: absolute;
     z-index: -1;
-    height: 100%;
+    height: calc(100% + 81px);
     width: 100%;
     background: rgba(0,0,0,0.25);
     top: 0;
@@ -722,7 +722,7 @@ background: #FF650D;
 <section class="hero-section" style="position:relative;">
     <div id="backgroundvideocontainer" class="background-video-container">
 <video class="background-video" autoplay="" muted="" loop="">
-<source src="images/video-1.webm" type="video/webm">
+<source src="images/video-2.webm" type="video/webm">
 </video>
 </div>
 
@@ -1064,6 +1064,7 @@ AOS.init({
 
 });
 </script>
+
 
 
 
