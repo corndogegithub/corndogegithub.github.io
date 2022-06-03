@@ -124,45 +124,17 @@ text-align: center !important;
 position:relative;
 }
     
-  .hero-image {
+ .hero-image {
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-name: bounce-2;
-        animation-timing-function: ease-in-out;
-       /*animation-direction: alternate;*/
+        animation-timing-function: ease;
     }
-    
-    .hero-image-run {
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-name: bounce-3;
-        animation-timing-function: linear;
-    }
-    
-    
     @keyframes bounce-2 {
-        0%   { transform: translateX(50px) scaleX(1) ;}
-        
-        45%   { transform: scaleX(1);}
-        50%  { transform: translateX(-50px) scaleX(-1); }
-        
-        95%  { transform: scaleX(-1); }
-        100% { transform: translateX(50px) scaleX(1);}
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-25px); }
+        100% { transform: translateY(0); }
     }   
-    
-     @keyframes bounce-3 {
-        0%   { transform: translateY(0px);}
-        10%   { transform: translateY(-10px);}
-        20%   { transform: translateY(0px);}
-        30%   { transform: translateY(-10px);}
-        40%   { transform: translateY(0px);}
-        50%  { transform:  translateY(-10px); }
-        60%   { transform: translateY(0px);}
-       70%   { transform: translateY(-10px);}
-        80%   { transform: translateY(0px);}
-        90%   { transform: translateY(-10px);}
-        100% { transform: translateY(0px);}
-    } 
 
 
 .hero-container .buy-button{
