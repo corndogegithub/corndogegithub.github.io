@@ -117,6 +117,50 @@ color:#FFFFFF;
 font-size:1.25em;
 text-align: center !important;
 }
+
+    
+.hero-container .presale-countdown-wrapper{
+	position:relative;
+	padding-top:40px;
+}
+
+.hero-container .presale-countdown-wrapper .presale-countdown-title{
+	position:absolute;
+	color:#FFFFFF;
+	top:0;
+	 left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto; 
+	width:100%;
+	font-weight:500;
+	letter-spacing:0.05em;
+	font-size:1.25em;
+}
+
+.hero-container .presale-countdown-wrapper .countdown-unit{
+	color:#FFFFFF;
+	font-size:2.5em;
+	background:rgb(123, 55, 46);
+	padding:7.5px 15px;
+	border-radius:12px;
+}
+
+.hero-container .presale-countdown-wrapper .countdown-unit-title{
+	color:#FFFFFF;
+	font-size:1em;
+	font-weight:300;
+	margin-top:5px;
+}
+
+.hero-container .presale-countdown-wrapper .unit-separator{
+	color:#FFFFFF;
+	margin-left:20px;
+	margin-right:20px;
+	font-size:2.5em;
+	font-weight:400;
+	display:none;
+}
     
     .hero-container .hero-img{
 }
@@ -1078,15 +1122,15 @@ background-repeat: no-repeat;
 
 <div data-aos="fade-right" class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
 
-<h1 class="hero-title text-center"><span style="/*color:#F36C5F;text-shadow: -1px 0 #7B372E, 0 1px #7B372E, 1px 0 #7B372E, 0 -1px #7B372E;*/">Welcome To </span><span style="color:#FDC02C;text-shadow: -1px 0 #7B372E, 0 1px #7B372E, 1px 0 #7B372E, 0 -1px #7B372E;">CornDoge!</span> <span class="d-none" style="/* color:#015CFF;text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;*/">Inu</span></h1>
+<h1 class="hero-title text-center"><span style="/*color:#F36C5F;text-shadow: -1px 0 #7B372E, 0 1px #7B372E, 1px 0 #7B372E, 0 -1px #7B372E;*/" class="d-none">Welcome To </span><span style="color:#FDC02C;text-shadow: -1px 0 #7B372E, 0 1px #7B372E, 1px 0 #7B372E, 0 -1px #7B372E;">CornDoge</span> <span class="d-none" style="/* color:#015CFF;text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;*/">Inu</span></h1>
 
-<p class="hero-description mt-1">CornDoge is a hyper-deflationary, community-driven token deployed on the Binance Smart Chain</p>
+<p class="hero-description mt-1">CornDoge is a hyper-deflationary, community-driven token deployed on the Binance Smart Chain</p><div class="presale-countdown-wrapper d-flex flex-row align-items-center"><div class="presale-countdown-title text-center">Private Presale Starts In</div><div class="countdown-unit-wrapper d-flex flex-column align-items-center"><span id="countdown-days" class="countdown-unit">00</span><span class="countdown-unit-title">Days</span></div><div class="unit-separator">:</div><div class="countdown-unit-wrapper d-flex flex-column align-items-center ms-3"><span id="countdown-hours" class="countdown-unit">00</span><span class="countdown-unit-title">Hours</span></div><div class="unit-separator">:</div><div class="countdown-unit-wrapper d-flex flex-column align-items-center ms-3"><span id="countdown-minutes" class="countdown-unit">00</span><span class="countdown-unit-title">Minutes</span></div><div class="unit-separator">:</div><div class="countdown-unit-wrapper d-flex flex-column align-items-center ms-3"><span id="countdown-seconds" class="countdown-unit">00</span><span class="countdown-unit-title">Seconds</span></div><p class="d-none" id="demo">EXPIRED</p></div>
 <div class="d-none d-flex flex-column flex-sm-row mt-3">
 <a type="button" class="buy-button btn btn-primary m-2 " href="https://pancakeswap.finance/swap?outputCurrency=" target="_blank" style="box-shadow: rgba(204, 29, 222, 0.25) 0px 6px 12px -2px, rgba(204, 29, 222, 0.3) 0px 3px 7px -3px !important;">Buy On Pancakeswap</a>
 <a type="button" class="telegram-button btn btn-primary m-2" href="https://t.me/" target="_blank" style="box-shadow: rgba(76, 232, 211, 0.25) 0px 6px 12px -2px, rgba(76, 232, 211, 0.3) 0px 3px 7px -3px !important;">Join Our Telegram</a>
 </div>
 
-<div class="d-flex flex-column flex-sm-row mt-3">
+<div class="d-flex flex-column flex-sm-row mt-4">
 
 <a href="https://pancakeswap.finance/swap?outputCurrency" target="_blank"><button class="w-100 pushable buy-pushable-button" data-aos="fade">
   <span class="front-1">Buy On Pancakeswap</span>
@@ -1102,7 +1146,7 @@ background-repeat: no-repeat;
 
 
 
-</div><div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" data-aos="fade-left" style="position:relative;"><div class="w-100 px-lg-4"><div class="ratio ratio-1x1">
+</div><div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" data-aos="fade-left" style="position:relative;"><div class="w-100"><div class="ratio ratio-1x1">
  <div id="coin">
   <article class="back"></article>
     <article class="middle"></article>
@@ -1518,5 +1562,38 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+    var countDownDate = new Date("June 7, 2022 00:00:00").getTime();
+							
+	var x = setInterval(function() {
+	var now = new Date().getTime();
+	var distance = countDownDate - now;
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	if (days<10) {
+	document.getElementById("countdown-days").innerHTML ="0"+days ;}else{
+	document.getElementById("countdown-days").innerHTML =days ;
+	}
+	if (hours<10) {
+	document.getElementById("countdown-hours").innerHTML ="0"+hours ;}else{
+	document.getElementById("countdown-hours").innerHTML =hours ;
+	}
+	if (minutes<10) {
+	document.getElementById("countdown-minutes").innerHTML ="0"+minutes ;}else{
+	document.getElementById("countdown-minutes").innerHTML =minutes ;
+	}
+	if (seconds<10) {
+	document.getElementById("countdown-seconds").innerHTML ="0"+seconds ;}else{
+	document.getElementById("countdown-seconds").innerHTML =seconds ;
+	}
+	if (distance < 0) {
+    	clearInterval(x);
+	document.getElementById("demo").innerHTML = "EXPIRED";
+	}
+	}, 100);
 </script>
+
 </body></html>
