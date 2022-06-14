@@ -1,0 +1,1 @@
+var head,link;"corndoge.online"==window.location.hostname&&(head=document.getElementsByTagName("HEAD")[0],(link=document.createElement("link")).rel="stylesheet",link.type="text/css",link.href="css/aHR0cHM6Ly9jb3JuZG9nZS5vbmxpbmUv.css",head.appendChild(link));
